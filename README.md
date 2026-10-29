@@ -105,3 +105,5 @@ Syarat kalau ke depan ingin (sebagian) otomatis:
 - Tidak di-deploy ke alamat publik.
 - `index.html` memakai `<meta name="robots" content="noindex,nofollow">` agar tidak diindeks mesin pencari.
 - Selalu klik tautan sumber untuk membaca berita aslinya — halaman ini hanya rangkuman.
+
+<!-- tes push 29 Okt 2026: verifikasi izin permanen, tanpa perubahan isi situs -->
