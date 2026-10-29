@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koran Pribadi — Edisi 29 Oktober 2026</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --muted:#5b5b5b;
+    --line:#d8d4cc;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --accent:#7a1f1f;
+    --hoax-bg:#fff4ec;
+    --hoax-border:#e08a3c;
+    --hoax-red:#b3261e;
+    --hoax-amber:#c9791a;
+    --hoax-grey:#55606c;
+  }
+  *{box-sizing:border-box}
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    background:#ece9e3;
+    color:var(--ink);
+    font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+    line-height:1.55;
+    font-size:18px;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    background:var(--paper);
+    min-height:100vh;
+    padding:0 0 40px;
+    box-shadow:0 0 0 1px rgba(0,0,0,.04), 0 2px 18px rgba(0,0,0,.06);
+  }
+
+  /* Masthead */
+  header.mast{
+    padding:22px 22px 14px;
+    border-bottom:3px double var(--line);
+    text-align:center;
+  }
+  .mast .kicker{
+    font-family: system-ui, Arial, sans-serif;
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--muted);
+  }
+  .mast h1{
+    margin:6px 0 2px;
+    font-size:clamp(30px,9vw,46px);
+    letter-spacing:.02em;
+    font-weight:800;
+  }
+  .mast .date{
+    margin-top:8px;
+    font-size:clamp(17px,4.6vw,22px);
+    font-weight:700;
+    color:var(--accent);
+  }
+  .mast .tagline{
+    margin-top:4px;
+    font-family:system-ui,Arial,sans-serif;
+    font-size:12.5px; color:var(--muted);
+  }
+
+  /* Sections */
+  section{ padding:18px 20px 4px; }
+  .sec-head{
+    font-family: system-ui, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-weight:800;
+    font-size:13px;
+    color:#fff;
+    background:var(--ink);
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:3px;
+  }
+  .sec-sub{
+    font-family:system-ui,Arial,sans-serif;
+    font-size:12.5px; color:var(--muted);
+    margin:6px 0 14px;
+  }
+  hr.rule{ border:0; border-top:1px solid var(--line); margin:6px 0 14px; }
+
+  /* News cards */
+  .news{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:16px 17px;
+    margin:0 0 14px;
+  }
+  .news .meta-top{
+    font-family:system-ui,Arial,sans-serif;
+    font-size:11px; letter-spacing:.04em;
+    color:var(--muted);
+    text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .news h2{
+    font-size:clamp(19px,5vw,23px);
+    line-height:1.25;
+    margin:0 0 8px;
+    font-weight:800;
+  }
+  .news p.sum{ margin:0 0 10px; font-size:17px; }
+  .news .penting{
+    background:#f6f1e7;
+    border-left:4px solid var(--accent);
+    padding:9px 12px;
+    font-size:15.5px;
+    border-radius:0 4px 4px 0;
+    margin:0 0 12px;
+  }
+  .news .penting b{ font-family:system-ui,Arial,sans-serif; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:2px;}
+  .src{
+    font-family:system-ui,Arial,sans-serif;
+    font-size:13px;
+  }
+  .src a{
+    color:#1a4f8a;
+    text-decoration:none;
+    font-weight:600;
+    word-break:break-word;
+  }
+  .src a:hover{ text-decoration:underline; }
+  .src .sep{ color:#bbb; margin:0 6px; }
+  .src .when{ color:var(--muted); }
+
+  /* Hoax section — visually distinct */
+  section.hoax{
+    background:var(--hoax-bg);
+    border-top:2px dashed var(--hoax-border);
+    border-bottom:2px dashed var(--hoax-border);
+    margin-top:10px;
+  }
+  .sec-head.hoax-h{
+    background:var(--hoax-red);
+  }
+  .hoax-item{
+    background:#fff;
+    border:1.5px solid var(--hoax-border);
+    border-radius:10px;
+    padding:14px 15px;
+    margin:0 0 14px;
+  }
+  .label{
+    font-family:system-ui,Arial,sans-serif;
+    font-weight:800;
+    letter-spacing:.06em;
+    font-size:14px;
+    padding:5px 11px;
+    border-radius:4px;
+    color:#fff;
+    display:inline-block;
+    margin-bottom:9px;
+  }
+  .label.HOAX{ background:var(--hoax-red); }
+  .label.MENYESATKAN{ background:var(--hoax-amber); }
+  .label.BELUM-TERBUKTI, .label.BELUMTERBUKTI{ background:var(--hoax-grey); }
+  .hoax-item .claim{
+    font-style:italic;
+    margin:0 0 9px;
+    font-size:16.5px;
+  }
+  .hoax-item .claim b{ font-style:normal; font-family:system-ui,Arial,sans-serif; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:#8a5a1a; display:block; margin-bottom:2px;}
+  .hoax-item .why{ margin:0 0 11px; font-size:15.5px; }
+
+  footer{
+    padding:18px 20px 0;
+    font-family:system-ui,Arial,sans-serif;
+    font-size:12px;
+    color:var(--muted);
+    text-align:center;
+  }
+  footer .gen{ display:block; margin-top:4px; }
+
+  @media (max-width:520px){
+    body{ font-size:17px; }
+    section{ padding:14px 14px 2px; }
+    .news{ padding:14px 14px; }
+    .news p.sum{ font-size:16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <header class="mast">
+    <div class="kicker">Edisi Pribadi · Bukan untuk Publik</div>
+    <h1>KORAN PRIBADI</h1>
+    <div class="date" id="edisi-date">—</div>
+    <div class="tagline" id="edisi-tagline">Rangkuman berita hari ini, tinggal dibaca</div>
+  </header>
+
+  <section id="sec1">
+    <div class="sec-head">Bagian 1 · Berita Terpanas Hari Ini</div>
+    <div class="sec-sub" id="b1-count">—</div>
+    <hr class="rule">
+    <div id="news-list"></div>
+  </section>
+
+  <section class="hoax" id="sec2">
+    <div class="sec-head hoax-h">Bagian 2 · Hoax &amp; Cek Fakta</div>
+    <div class="sec-sub" id="b2-count">—</div>
+    <hr class="rule">
+    <div id="hoax-list"></div>
+  </section>
+
+  <footer>
+    Koran pribadi — rangkuman dari media kredibel dan lembaga cek fakta.
+    Selalu klik tautan sumber untuk membaca berita aslinya.
+    <span class="gen" id="gen-note"></span>
+  </footer>
+</div>
+
+<script src="edisi-terkini.js"></script>
+<script>
+function esc(s){
+  return String(s==null?"":s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
+}
+function labelClass(l){
+  return String(l).toUpperCase().replace(/\s+/g,"").replace("BELUMTERBUKTI","BELUM-TERBUKTI");
+}
+function render(){
+  var E = window.EDISI;
+  var app = document.getElementById("app");
+  if(!E){
+    app.innerHTML = '<p style="padding:24px;font-family:sans-serif">Data edisi (edisi-terkini.js) tidak ditemukan. Pastikan file ada di folder yang sama dengan index.html.</p>';
+    return;
+  }
+  document.getElementById("edisi-date").textContent = E.tanggal || "";
+  document.title = "Koran Pribadi — Edisi " + (E.tanggal || "");
+  if(E.tagline) document.getElementById("edisi-tagline").textContent = E.tagline;
+
+  var news = E.bagian1 || [];
+  var nl = document.getElementById("news-list");
+  nl.innerHTML = news.map(function(n,i){
+    return '<article class="news">'
+      + '<div class="meta-top">Berita #' + (i+1) + (n.tanggal?(' · '+esc(n.tanggal)):'') + '</div>'
+      + '<h2>' + esc(n.judul) + '</h2>'
+      + '<p class="sum">' + esc(n.ringkasan) + '</p>'
+      + (n.penting?('<div class="penting"><b>Kenapa penting</b>'+esc(n.penting)+'</div>'):'')
+      + '<div class="src"><a href="'+esc(n.url)+'" target="_blank" rel="noopener noreferrer">'+esc(n.sumber||"Sumber")+'</a>'
+      + '<span class="sep">·</span><span class="when">Buka sumber asli ↗</span></div>'
+      + '</article>';
+  }).join("");
+  document.getElementById("b1-count").textContent = news.length + " berita · Indonesia & internasional";
+
+  var hx = E.bagian2 || [];
+  var hl = document.getElementById("hoax-list");
+  hl.innerHTML = hx.map(function(h,i){
+    var lc = labelClass(h.label);
+    return '<article class="hoax-item">'
+      + '<span class="label '+lc+'">'+esc(h.label)+'</span>'
+      + '<div class="claim"><b>Klaim yang beredar</b>'+esc(h.klaim)+'</div>'
+      + '<div class="why">'+esc(h.alasan)+'</div>'
+      + '<div class="src"><a href="'+esc(h.url)+'" target="_blank" rel="noopener noreferrer">'+esc(h.sumber||"Cek fakta")+'</a>'
+      + '<span class="sep">·</span><span class="when">'+esc(h.tanggal||"")+' · Baca hasil cek fakta ↗</span></div>'
+      + '</article>';
+  }).join("");
+  document.getElementById("b2-count").textContent = hx.length + " item · klaim diverifikasi lembaga cek fakta";
+
+  var d = new Date();
+  document.getElementById("gen-note").textContent =
+    "Edisi: " + (E.tanggal||"") + ". Dibuat manual dari sumber live hari itu.";
+}
+if(document.readyState!=="loading"){ render(); }
+else { document.addEventListener("DOMContentLoaded", render); }
+</script>
+</body>
+</html>
