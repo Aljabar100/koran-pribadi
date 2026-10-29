@@ -107,3 +107,5 @@ Syarat kalau ke depan ingin (sebagian) otomatis:
 - Selalu klik tautan sumber untuk membaca berita aslinya — halaman ini hanya rangkuman.
 
 <!-- tes push 29 Okt 2026: verifikasi izin permanen, tanpa perubahan isi situs -->
+
+<!-- tes push konektor 29 Okt 2026: verifikasi opsi izin permanen jalur konektor -->
